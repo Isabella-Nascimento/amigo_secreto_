@@ -36,7 +36,6 @@ Responsivo: Funciona perfeitamente em dispositivos móveis, tablets e desktops.
 
 ## Onde encontrar o projeto
 
-https://amigo-secreto-inky-ten.vercel.app/
 
 ## Autor do projeto
 

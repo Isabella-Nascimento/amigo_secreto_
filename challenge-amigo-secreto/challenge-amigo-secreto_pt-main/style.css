@@ -1,0 +1,212 @@
+:root {
+    --cor-primaria: #1A1A1A; 
+    --cor-secundaria: #2D2D2D; 
+    --cor-terciaria: #4A90E2; 
+    --cor-botao: #4A90E2; 
+    --cor-botao-hover: #333333; 
+    --cor-texto: #E0E0E0; 
+    --cor-branca: #FFFFFF; 
+    --cor-success: #C7D9DD; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    color: var(--cor-texto);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+    max-width: 800px;
+    background-color: var(--cor-secundaria);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+    background-color: var(--cor-terciaria);
+}
+
+.header-banner img {
+    max-width: 250px; 
+    margin-left: 20px;
+
+}
+
+.input-section {
+    flex: 60%;
+    background-color: var(--cor-secundaria);
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.main-title {
+    font-size: 39px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--cor-branca);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    font-family: "Inter", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--cor-terciaria);
+    margin: 10px 0;
+    text-align: center;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+    outline: none;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto);
+}
+
+.input-name:focus {
+    border-color: var(--cor-botao);
+}
+
+.button-container {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-add {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-branca);
+    border-radius: 0 25px 25px 0;
+}
+
+.button-add:hover {
+    background-color: #357ABD; 
+}
+
+.button-draw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--cor-branca);
+    background-color: var(--cor-botao);
+    font-size: 16px;
+}
+
+.button-draw img {
+    margin-right: 10px;
+}
+
+.button-draw:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+.button-reset {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.button-reset:hover {
+    background-color: #333333; 
+}
+
+ul {
+    list-style-type: none;
+    color: var(--cor-texto);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+.result-list {
+    margin-top: 15px;
+    color: var(--cor-success);
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-reset {
+        width: 100%;
+    }
+
+    .header-banner {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+}
